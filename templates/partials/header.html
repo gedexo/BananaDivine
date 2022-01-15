@@ -1,0 +1,57 @@
+{% load static %}
+<div class="chipsofic-site-preloader-wrap">
+    <div class="spinner"></div>
+</div>
+<!-- Template Preloader End -->
+
+<!-- Main Header Area Start -->
+<div class="header-area">
+   <div class="cbp-af-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <a href="/">
+                            <h1><img src="{% static 'assets/img/logo-banana-divine.png' %}" alt="chipsofic"></h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="main-menu">
+                        <ul id="navigation">
+                            <li><a id="home" href="/#">HOME</a></li>
+                            <li><a id="aboutUs" href="/about/">ABOUT US</a></li>
+                            <li><a id="gallery" href="/gallery/">GALLERY</a></li>
+                            <li><a id="blog" href="/blog/">BLOG</a></li>
+                            <li><a id="products" href="/#our-products">PRODUCT</a></li>
+                            <li><a id="contactLi" href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div id="langDiv" class="lang">
+                    <ul class="nav-lang translation-links">
+                        <li><a href="#" id="langFr" class="notranslate" data-lang="French">Fr</a></li>
+                        <li><a href="#" id="langEn" class="notranslate" data-lang="English">En</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div id="google_translate_element"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Area Start -->
+        <div class="container"><div class="responsive-menu-wrap"></div></div>
+    <!-- Mobile Menu Area End -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="top-area text-center">
+                <h1 id="bannerHeader">{{banner.heading}}</h1>
+                <p id="bannerContent">{{banner.content}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

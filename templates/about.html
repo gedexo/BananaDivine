@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div scroll-spy="true" id="about-us" class="chipsofic-content-block">
+    <div class="container">
+        <div class="row">
+           <div class="about-us-section">
+                <div class="col-md-6">
+                    <h1><span>WE ARE</span> BANANE DIVINE</h1>
+                    <h2>Yummy Banana Chips 
+                    </h2>
+                    <p>Everybody loves bananas. We are cooking the best and mouthwatering banana chips for you. We use the fresh and finest quality bananas to make chips. These fresh bananas are sliced into very thin pieces and deep-fried in fresh oil by experienced chefs. Our aim is to deliver the best quality banana chips at the best satisfactory price. We never compromise on the quality of our products with delicious taste.</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <h3><i class="fa fa-ban" aria-hidden="true"></i><span>No</span> Preservatives</h3>
+                            <p>Zero preservatives are added to maintain the quality of our chips.</p>
+                        </div>
+                        <div class="col-sm-6">
+                           <h3><i class="fa fa-heartbeat" aria-hidden="true"></i><span>For Your</span> Health</h3>
+                            <p>we use high-grade oil to cook chips.
+                                Crispy Chips</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <h3><i class="fa fa-money" aria-hidden="true"></i><span>Crispy </span>Chips</h3>
+                            <p>We cook our banana chips with intense care to make them crispy.
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                           <h3><i class="fal fa-file-certificate"></i></i><span>Best </span> Bananas</h3>
+                            <p>Only the best fresh bananas are used for making chips.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInRight">
+                    <img src="{% static 'assets/img/background-image/Banana Cover.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div scroll-spy="true" id="our-team" class="chipsofic-content-block">
+    <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+               <div class="section-title text-center">
+                    <h1>Meet the Team</h1>
+                    <div class="chipsofic-subtitle">Check the People who are working behind this awesome product</div>
+               </div>
+           </div>
+        </div>      
+        <div class="row wow fadeInUp">
+            {% for team in team %}
+            <div class="col-sm-3 text-center">
+                <div class="single-team-item">
+                        <img src="{{team.image.url}}" alt="">
+                        <h3>{{team.name}}</h3>
+                        <p>{{team.description}}</p>
+                        <ul>
+                            {% if team.facebook %}
+                            <li><a href="{{team.facebook}}" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                            {% endif %}
+                            {% if team.twiter %}
+                            <li><a href="{{team.twiter}}" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                            {% endif %}
+                            {% if team.instagram %}
+                            <li><a href="{{team.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            {% endif %}
+                        </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div> 
+<div scroll-spy="true" class="chipsofic-content-block counter-block">
+    <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+               <div class="section-title text-center">
+                    <h1>Our Progress</h1>
+                    <div class="chipsofic-subtitle">Check our progress over the years</div>
+               </div>
+           </div>
+        </div>
+        
+       <div class="chipsofic-counter-area text-center">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                   <h2><span class="counter notranslate">37,020</span></h2>
+                    <p>Yearly Customer</p>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                   <h2><span class="counter notranslate">5,01,212</span></h2>
+                    <p>Sell Per Year</p>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                   <h2><span class="counter notranslate">9,210</span></h2>
+                    <p>Staff</p>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                   <h2><span class="counter notranslate">5,001</span></h2>
+                    <p>Showroom</p>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+{% endblock %}

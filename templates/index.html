@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    
+    <!-- Choose Our Chips Area Start -->
+    <div scroll-spy="true" id="our-products" class="chipsofic-content-block section-gray">
+        <div class="container">
+          <div class="row">
+            
+             <div class="col-md-12">
+                   <div class="section-title text-center">
+                        <h1>Pick Your Flavour</h1>
+                        <div class="chipsofic-subtitle">Pick your favourite flavoured chips</div>
+                   </div>
+               </div>
+            </div>
+            
+           <div class="choose-our-chips-content-area text-center wow fadeInUp">
+                <div class="row">
+                    {% for products in products %}
+                    <div class="col-sm-6 col-md-3 single-chips-item">
+                      <img src="{{products.image.url}}" alt="">
+                       <h3>{{products.name}}</h3>
+                       <div class="pricing"><span>Price:</span> ${{products.price}}</div>
+                        <p>{{products.description}}.</p>
+                        <a class="btn chipsofic-small-btn" data-scroll href="#">Order Now</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div scroll-spy="true" class="chipsofic-content-block process-block">
+        <div class="container">
+          <div class="row">
+             <div class="col-md-12">
+                   <div class="section-title text-center">
+                        <a onclick="changeVideo('ctvlUvN6wSE')"><i class="fa fa-play-circle"></i></a>
+                        <h1>Check our Process</h1>
+                        <div class="chipsofic-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt</div>
+                   </div>
+               </div>
+            </div> 
+        </div>
+    </div>
+    <!-- Video Popup -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-label="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe id="iframeYoutube" class="embed-responsive-item" width="816" height="459" src="https://www.youtube.com/embed/ctvlUvN6wSE"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div scroll-spy="true" id="customer-feedback" class="testimonial-slider-wrapper testimonial-bg-1">
+        <div class="container">
+           <div class="row">
+             <div class="col-md-12">
+                   <div class="section-title text-center">
+                        <h1>Our Happy Customers</h1>
+                        <div class="chipsofic-subtitle">Discover what our Customers have to say</div>
+                   </div>
+               </div>
+            </div>
+            <div class="testimonial-slides owl-carousel">
+                {% for testimonial in testimonial %}
+                <div class="testimonial-slide-item-table">
+                    <div class="testimonial-slide-item-tablecell"> 
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6" style="width: 100%;padding: 0 24px;">
+                                <div class="circle-testimonial-item">
+                                    <div class="col-sm-4">
+                                        <img src="{{ testimonial.image.url }}" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <p>{{testimonial.description}}.</p>
+                                        <ul class="review-stars text-right">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <h4>{{testimonial.name}} <span>{{testimonial.destination}}</span></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor  %}
+                <!-- <div class="testimonial-slide-item-table">
+                    <div class="testimonial-slide-item-tablecell"> 
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="circle-testimonial-item">
+                                    <div class="col-sm-4">
+                                        <img src="{% static 'assets/img/testimonial-inner-03.png' %}" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <p>This is a dummy description. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <ul class="review-stars text-right">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <h4>Ura Dhura <span>London</span></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="circle-testimonial-item">
+                                    <div class="col-sm-4">
+                                        <img src="assets/img/testimonial-inner-04.png" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <p>This is a dummy description. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <ul class="review-stars text-right">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star-half-o"></i></li>
+                                        </ul>
+                                        <h4>Cholen Jai <span>Beijing</span></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+<!--             
+                <div class="testimonial-slide-item-table">
+                    <div class="testimonial-slide-item-tablecell"> 
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="circle-testimonial-item">
+                                    <div class="col-sm-4">
+                                        <img src="assets/img/testimonial-inner-05.png" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <p>This is a dummy description. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <ul class="review-stars text-right">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                        <h4>Mia Valo <span>Barcelona</span></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="circle-testimonial-item">
+                                    <div class="col-sm-4">
+                                        <img src="assets/img/testimonial-inner-06.png" alt="">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <p>This is a dummy description. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                        <ul class="review-stars text-right">
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star-half-o"></i></li>
+                                        </ul>
+                                        <h4>Hasan Mia <span>Dhaka</span></h4>
+                                    </div>
+                                    <div class="clear"></div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+{% endblock %}
+
+    
