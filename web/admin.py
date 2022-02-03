@@ -1,3 +1,4 @@
+from email import message
 from django.contrib import admin
 from . import models
 # Register your models here.
@@ -37,3 +38,22 @@ class Blog(admin.ModelAdmin):
     list_display = ['heading','image','category','content']
 
 admin.site.register(models.blog,Blog)
+
+class Contact(admin.ModelAdmin):
+    model = models.contact
+    list_display = ['date','name','email','subject','message']
+
+admin.site.register(models.contact,Contact)
+
+class Background_image(admin.ModelAdmin):
+    model = models.background_image
+    list_display = ['id','image_one','image_two','image_three']
+
+admin.site.register(models.background_image,Background_image)
+
+
+class About_us(admin.ModelAdmin):
+    model = models.about
+    list_display = ['category','content']
+
+admin.site.register(models.about,About_us)

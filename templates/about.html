@@ -6,11 +6,36 @@
         <div class="row">
            <div class="about-us-section">
                 <div class="col-md-6">
-                    <h1><span>A propos de nous :Je me présente NGOMA VICTOIRE, fondatrice de </span> BANANE DIVINE</h1>
+                    <h1><span>A propos de nous :<span><h2>Je me présente je m'appelle Victoire
+                        NGOMA,fondatrice de<span><b style="font-size: 27px;"> BANANE DIVINE</b></span> </h2></span> </h1>
                     <h2>
                     </h2>
-                    <p>Depuis toute petite j’ai toujours aimer les bananes plantains…elle m’a souvent procurée cette énergie inexplicable puis le goût on n’en parle … ? Je ne m’en suis jamais lasser !! En grandissant j’ai fait la connaissance du «processus C.E.D «( couper,éplucher,découper selon les formes…) et je me suis dit waouh c’est donc ça que maman faisait quand nous recevions du monde à la maison ? En gérant tout le reste en même temps ?? quel Femme!! Malgré le fait de mettre familiarisé avec le processus , je me suis rendu compte que je n’avais pas hérité de la patience de maman… et un jour j’ai eu cette idée vue mon amour pour les bananes plantains et ses bienfaits dont j’ai bénéficié très honnêtement je pensais être la première dans le monde à avoir eu cet illumination et en faisant des recherches je me suis rendue compte que ce n’était pas le cas mais ça ne m’a pas empêcher d’emmener ce projet à terme car « ce qui fut,cela sera,ce qui s’est fait se refera;et il n’y a rien de nouveau sous le soleil « mais seul notre différence nous distingue … 
-                        je veux que vous ayez le choix raison pour laquelle je vous  proposent différentes forme selon vos envies,et à prix accessible pour tous !</p>
+                    <p>
+                        {{about_banana_divine}}
+                    </p>
+                    <!-- <p>Depuis toute petite j'ai toujours aimé les
+                        bananes plantain. Elles m'ont souvent
+                        procurées cette énergie inexplicable et
+                        puis le goût, on n'en parle ... ? Je ne
+                        m'en suis jamais lassée !!
+                        En grandissant j'ai fait la connaissance
+                        du processus C.E.D
+                        (couper, éplucher,découper).
+                        Je me suis dit waouh c'est donc
+                        tout cela que maman faisait quand nous
+                        recevions du monde à la maison ?
+                        En gérant tout le reste en même
+                        temps ??  Quelle Femme !!  Et
+                        pourtant, malgré le fait de mettre
+                        familiarisée avec le processus, je me suis
+                        rendue compte que je n'avais pas héritée
+                        de la patience de ma maman.
+                        Et un jour j'ai eu cette idée, vue mon
+                        amour pour les bananes plantains et ses
+                        bienfaits dont j'ai bénéficié, et très
+                        honnêtement je pensais être la première
+                        dans le monde à avoir eu cette
+                        illumination et en faisant des recherches je me suis rendue compte que ce n'était pas le cas.Mais en France oui donc j’ai maintenue ma motivation .Pour ma part je veux que vous ayez le choix, raison pour laquelle je vous propose différentes formes selon vos envies, et à prix accessible pour tous!</p> -->
                 </div>
                 <div class="col-md-6 wow fadeInRight">
                     <img src="{% static 'assets/img/background-image/Banana Cover.png' %}" alt="">
@@ -21,20 +46,39 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-lg-4">
-                           <h3><i class="fa fa-money" aria-hidden="true"></i><span></span> VISION </h3>
-                            <p>Partager les bienfaits des bananes plantains car il ne faut pas oublier que ce sont des fruits qui se consomme comme des  légumes. Elles contiennent des glucides complexe mais pour en bénéficier il faut les manger cuite , elle possède également une forte teneur d’amidon non digestible 
-                                Source de potassium ( système nerveux,fonction musculaire,pression sanguine), vitamines C,B6,B9, riche en magnésium. </p>
+                           <h3><i class="fa fa-money" aria-hidden="true"></i><span></span><b>VISION</b></h3>
+                           <p>{{vision}}
+                            <!-- <p>Partager les bienfaits des bananes
+                                plantains car ce sont des fruits qui se
+                                consomment comme des légumes.
+                                Elles contiennent des glucides
+                                complexes mais pour en bénéficier il faut
+                                les manger cuites, elles possèdent
+                                également une forte teneur d'amidon non
+                                digestible.
+                                Source de potassium (système
+                                nerveux,fonction musculaire, pression
+                                sanguine), vitamines C,B6,B9, riche en
+                                magnésium, elles sont un atout pour
+                                notre santé. -->
+                                </p>
                         </div>
                         <div class="col-lg-4">
-                           <h3><i class="fa fa-bullseye" aria-hidden="true"></i><span></span>MISSION</h3>
-                            <p>Permettre à tous de pouvoir faire pleins de choses à la fois étant en cuisine notamment pour les traiteurs,des repas en famille…. sans chercher cette personne qui n’est pas souvent emballer à l’idée de faire le « processus «  et ceux dans la bonne humeur.
-                                Pourquoi. </p>
+                           <h3><i class="fa fa-bullseye" aria-hidden="true"></i><span></span><b>MISSION</b></h3>
+                           <p>{{mission}}</p>
+                            <!-- <p>Permettre à tous de pouvoir être
+                                multitâches tout en étant en cuisine
+                                notamment pour les traiteurs, les repas
+                                familiaux... Sans chercher cette
+                                personne qui n'est pas souvent emballé
+                                à l'idée de faire le processus. </p> -->
                                 <span></span>
                         </div>
                         <div class="col-lg-4">
-                            <h3><i class="fa fa-address-card" aria-hidden="true"></i><span></span>Pourquoi BANANE DIVINE ?</h3>
-                             <p> vous suffit de goûter pour comprendre le sens même du NOM.
-                                Certainement des bananes quelconques à vos yeux mais au goûts vous penserez autrement car tout ce qui est fait avec AMOUR on sait tous que c’est le meilleur des menus. </p>
+                            <h3><i class="fa fa-address-card" aria-hidden="true"></i><span></span><b>POURQUOI BANANE DIVINE ?</b></h3>
+                            <p>{{why_banana_divine}}</p>
+                             <!-- <p> Il vous suffit d’y goûter pour comprendre le sens même du Nom.
+                                Certainement des bananes quelconques à vos yeux mais au goût vous penserez autrement car nous savons tous que ce qui est fait avec Amour est le meilleur des menus. </p> -->
                                  <span></span>
                          </div>
                     </div>
@@ -109,4 +153,50 @@
         </div>  
     </div>
 </div>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="cnt-div">
+                <h3 class="cnt-h3">GET IN TOUCH WITH US</h3>
+                <p class="cnt-p  text-justify"> Every item we stock is carefully selected to ensure we offer you top quality products at best prices guaranteed. Get in touch with us to know more about our products and services.</p>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <form id="contcactForm" method="POST">
+                {% csrf_token %}
+                <h3>CONTACT</h3>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="name" class="form-control"  placeholder="Your name" required>
+                      </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Your email" required>
+                      </div>
+                </div>
+               <div class="col-lg-12">
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                  </div>
+               </div>
+               <div class="col-lg-12">
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" class="form-control" rows="6" required>
+                    </textarea>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                   <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+               </div>
+              </form>
+        </div>
+    </div>
+</div>
+<br>
 {% endblock %}

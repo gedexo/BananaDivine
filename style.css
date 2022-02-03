@@ -425,13 +425,13 @@ img {
 .process-block {
     background: url('assets/img/background-image/banner-img1.jpg') no-repeat fixed center;
     background-size: cover; 
-    padding: 122px 0px 122px;
 }
 
 .process-block .fa {
     font-size: 100px;
     color: #FFC527;
     cursor:pointer;
+    padding: 122px 0px 122px;
 }
 
 .process-block .fa:hover {

@@ -2,17 +2,18 @@
 <div class="chipsofic-site-preloader-wrap">
     <div class="spinner"></div>
 </div>
-<!-- Template Preloader End -->
-
-<!-- Main Header Area Start -->
+{% if images.image_one %}
+<div class="header-area" style="background-image:url('{{images.image_one.crop.6000x4000}}');">
+{% else%}
 <div class="header-area">
+{% endif %}
    <div class="cbp-af-header">
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
                     <div class="logo">
                         <a href="/">
-                            <h1><img src="{% static 'assets/img/logo-banana-divine.png' %}" alt="chipsofic"></h1>
+                            <h1><img src="{% static 'assets/img/Banana 165x49.png' %}" alt="chipsofic"></h1>
                         </a>
                     </div>
                 </div>

@@ -1,5 +1,7 @@
+from hashlib import blake2s
+from pyexpat import model
 from statistics import mode
-from turtle import heading
+from unicodedata import category
 from django.db import models
 from versatileimagefield.fields import VersatileImageField, PPOIField
 
@@ -42,3 +44,23 @@ class blog(models.Model):
 class banner(models.Model):
     heading = models.CharField(max_length=100)
     content = models.TextField(max_length=200,null=True,blank=True)
+
+class contact(models.Model):
+    date = models.DateField(auto_now_add=True)
+    name = models.CharField(max_length=100)
+    email= models.EmailField(max_length=50)
+    subject = models.CharField(max_length=200)
+    message = models.TextField(max_length=500)
+
+class about(models.Model):
+    category_Choices = (('about banana divine','about banana divine'),('why banana divine','why banana divine'),('vision','vision'),('mission','mission'))
+    category = models.CharField(choices=category_Choices,max_length=50,unique=True)
+    content = models.TextField(max_length=2000)
+
+class background_image(models.Model):
+    image_one = VersatileImageField(upload_to = 'background_image',ppoi_field='image_ppoi_one',blank=True)
+    image_ppoi_one = PPOIField()
+    image_two = VersatileImageField(upload_to = 'background_image',ppoi_field='image_ppoi_two',blank=True)
+    image_ppoi_two = PPOIField()
+    image_three = VersatileImageField(upload_to = 'background_image',ppoi_field='image_ppoi_three',blank=True)
+    image_ppoi_three = PPOIField()

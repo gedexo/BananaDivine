@@ -110,3 +110,6 @@ $(document).ready(function(){
      }
 })
 
+$("#contcactForm").submit(function(){
+    swal("Success!", "We will get back to you soon!", "success")    
+});
